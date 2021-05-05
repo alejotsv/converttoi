@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change to I</title>
+</head>
+<body>
+Phrase: <input id="thePhrase" type="text" value="Insert your phrase">
+
+<button onclick="changeToI()">Change it to I</button>
+
+<p id="demo"></p>
+
+<script>
+function changeToI() {
+  let x = document.getElementById("thePhrase").value;
+  let y = x.replace(/[aeou]/g, "i");
+  let final = y.replace(/[áéóú]/g, "í");
+  
+  document.getElementById("demo").innerHTML = final;
+}
+</script>
+
+  
+</body>
+</html>
