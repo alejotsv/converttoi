@@ -14,10 +14,18 @@ Phrase: <input id="thePhrase" type="text" placeholder="Insert your phrase">
 
 <script>
 function changeToI() {
+ 
   let x = document.getElementById("thePhrase").value;
-  let y = x.replace(/[aeou]/g, "i");
-  let final = y.replace(/[áéóú]/g, "í");
+  let final;
+  let xLength = x.length;
   
+  if(xLength>0){
+    let y = x.replace(/[aeou]/g, "i");
+    final = y.replace(/[áéóú]/g, "í");
+  } else {
+    final = "Add a phrase to convert."
+  }
+
   document.getElementById("demo").innerHTML = final;
 }
 </script>
