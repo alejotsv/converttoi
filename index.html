@@ -8,11 +8,21 @@
 <body>
 Phrase: <input id="thePhrase" type="text" placeholder="Insert your phrase">
 
-<button onclick="changeToI()">Change it to I</button>
+<button id="submit" onclick="changeToI()">Change it to I</button>
 
 <p id="demo"></p>
 
 <script>
+let input = document.getElementById("thePhrase");
+let button = document.getElementById("submit");
+input.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13){
+    event.preventDefault;
+    button.click();
+  }
+});
+
+
 function changeToI() {
  
   let x = document.getElementById("thePhrase").value;
