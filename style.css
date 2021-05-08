@@ -23,7 +23,7 @@ button {
   color: red;
 }
 
-.toCopy {
+#toCopy {
   color: rgb(6, 88, 116);
   font-weight: 3500;
   font-size: 30px;
