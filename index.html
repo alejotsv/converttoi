@@ -12,7 +12,9 @@
   <button id="submit" onclick="changeToI()">Change it to I</button>
 </div>
 
-<p id="demo"></p>
+<div class="result">
+<p id="final"></p>
+</div>
 
 <script>
 let input = document.getElementById("thePhrase");
@@ -35,10 +37,10 @@ function changeToI() {
     let y = x.replace(/[aeou]/g, "i");
     final = y.replace(/[áéóú]/g, "í");
   } else {
-    final = "Add a phrase to convert."
+    final = "<strong>Add a phrase to convert.</strong>"
   }
 
-  document.getElementById("demo").innerHTML = final;
+  document.getElementById("final").innerHTML = final;
 }
 </script>
 
