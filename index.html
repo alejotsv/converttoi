@@ -12,8 +12,6 @@
   <button id="submit" onclick="changeToI()">Change it to I</button>
 </div>
 
-<button onClick="copyButton()">Copy</button>
-
 <div class="result">
 <p id="final"></p>
 </div>
@@ -38,7 +36,7 @@ function changeToI() {
   if(xLength>0){
     let y = x.replace(/[aeou]/g, "i");
     finalPhrase = y.replace(/[áéóú]/g, "í");
-    final = '<strong><span id="toCopy">' + finalPhrase + '</span></strong>'
+    final = '<strong><span id="toCopy">' + finalPhrase + '</span></strong> <button onClick="copyButton()">Copy</button>'
   } else {
     final = '<strong><span class="addPhrase">Add a phrase to convert.</span></strong>'
   }
