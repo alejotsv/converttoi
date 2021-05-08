@@ -35,7 +35,8 @@ function changeToI() {
   
   if(xLength>0){
     let y = x.replace(/[aeou]/g, "i");
-    final = y.replace(/[áéóú]/g, "í");
+    finalPhrase = y.replace(/[áéóú]/g, "í");
+    final = '<span class="toCopy">' + finalPhrase + '</span>'
   } else {
     final = "<strong>Add a phrase to convert.</strong>"
   }
