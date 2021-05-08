@@ -13,7 +13,7 @@
 </div>
 
 <div class="result">
-<p id="final"></p>
+<div id="final"></div>
 </div>
 
 <script>
@@ -36,17 +36,24 @@ function changeToI() {
   if(xLength>0){
     let y = x.replace(/[aeou]/g, "i");
     finalPhrase = y.replace(/[áéóú]/g, "í");
-    final = '<strong><span id="toCopy">' + finalPhrase + '</span></strong> <button onClick="copyButton()">Copy</button>'
+    final = '<strong><span id="finalPhrase">' + finalPhrase + '</span></strong><br><button onClick="copyButton()">Copy</button>'
   } else {
     final = '<strong><span class="addPhrase">Add a phrase to convert.</span></strong>'
   }
 
-  document.getElementById("final").innerHTML = final;
+  document.getElementById("final").innerHTML = final;  
 }
 
 function copyButton(){
-  let phrase = document.getElementById("toCopy").textContent;
-  console.log(phrase);
+  let input = document.createElement("INPUT");
+  input.setAttribute("type", "text");
+  input.setAttribute("id", "toCopy");
+  input.setAttribute("value", finalPhrase);
+  console.log(input);
+  document.getElementById("final").appendChild(input);
+  // let phrase = document.getElementById("toCopy");
+  // phrase.select();
+  // document.execCommand("copy");
 }
 </script>
 
