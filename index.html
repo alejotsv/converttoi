@@ -49,11 +49,12 @@ function copyButton(){
   input.setAttribute("type", "text");
   input.setAttribute("id", "toCopy");
   input.setAttribute("value", finalPhrase);
-  console.log(input);
-  document.getElementById("final").appendChild(input);
-  // let phrase = document.getElementById("toCopy");
-  // phrase.select();
-  // document.execCommand("copy");
+  let final = document.getElementById("final");
+  final.appendChild(input);
+  let phrase = document.getElementById("toCopy");
+  phrase.select();
+  document.execCommand("copy");
+  final.removeChild(final.childNodes[3]);
 }
 </script>
 
