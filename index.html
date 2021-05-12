@@ -36,9 +36,13 @@ function changeToI() {
   
   if(xLength>0){
     let y = x.replace(/[aeou]/g, "i");
+    console.log("y = " + y);
     let a = y.replace(/[AEOU]/g, "I");
-    console.log(a);
-    finalPhrase = y.replace(/[áéóú]/g, "í");
+    console.log("a = "+a);
+    let b = a.replace(/[ÁÉÓÚ]/g, "Í");
+    console.log("b = " + b);
+    finalPhrase = b.replace(/[áéóú]/g, "í");
+    console.log("finalPhrase = " + finalPhrase);
     final = '<strong><span id="finalPhrase">' + finalPhrase + '</span></strong><button class="btn"><i class="fa fa-copy" onClick="copyButton()"></i></button>'
   } else {
     final = '<strong><span class="addPhrase">Add a phrase to convert.</span></strong>'
