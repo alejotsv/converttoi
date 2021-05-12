@@ -36,6 +36,8 @@ function changeToI() {
   
   if(xLength>0){
     let y = x.replace(/[aeou]/g, "i");
+    let a = y.replace(/[AEOU]/g, "I");
+    console.log(a);
     finalPhrase = y.replace(/[áéóú]/g, "í");
     final = '<strong><span id="finalPhrase">' + finalPhrase + '</span></strong><button class="btn"><i class="fa fa-copy" onClick="copyButton()"></i></button>'
   } else {
