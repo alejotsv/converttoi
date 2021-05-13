@@ -40,7 +40,7 @@ function changeToI() {
     let a = y.replace(/[AEOU]/g, "I");    
     let b = a.replace(/[ÁÉÓÚ]/g, "Í");    
     finalPhrase = b.replace(/[áéóú]/g, "í");    
-    final = '<strong><span id="finalPhrase">' + finalPhrase + '</span></strong><button class="btn"><i class="fa fa-copy" onClick="copyButton()"></i></button>'
+    final = '<strong><span id="finalPhrase">' + finalPhrase + '</span></strong><button class="btn" onClick="copyButton()"><i class="fa fa-copy"></i></button>'
   } else {
     final = '<strong><span class="addPhrase">Add a phrase to convert.</span></strong>'
   }
